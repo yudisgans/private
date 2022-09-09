@@ -155,8 +155,7 @@ if (anu.action == 'add') {
 var buffer = await getBuffer(ppuser)
 let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6285714170944@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 he = `HELLO 👋 SELAMAT DATANG DI GROUP ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
-const _0x236da0=_0x30df;function _0x30df(_0x259f0d,_0x369772){const _0x5cfc96=_0x5cfc();return _0x30df=function(_0x30dfa0,_0x8d251c){_0x30dfa0=_0x30dfa0-0x1aa;let _0x4cb746=_0x5cfc96[_0x30dfa0];return _0x4cb746;},_0x30df(_0x259f0d,_0x369772);}(function(_0x3a4474,_0x2c8a52){const _0x47c38c=_0x30df,_0x3f4f3b=_0x3a4474();while(!![]){try{const _0xfbf3cc=parseInt(_0x47c38c(0x1aa))/0x1+-parseInt(_0x47c38c(0x1b1))/0x2*(-parseInt(_0x47c38c(0x1ad))/0x3)+-parseInt(_0x47c38c(0x1b3))/0x4*(parseInt(_0x47c38c(0x1b0))/0x5)+-parseInt(_0x47c38c(0x1ae))/0x6+parseInt(_0x47c38c(0x1b2))/0x7+-parseInt(_0x47c38c(0x1af))/0x8+-parseInt(_0x47c38c(0x1ab))/0x9;if(_0xfbf3cc===_0x2c8a52)break;else _0x3f4f3b['push'](_0x3f4f3b['shift']());}catch(_0x17ff60){_0x3f4f3b['push'](_0x3f4f3b['shift']());}}}(_0x5cfc,0x67078));function _0x5cfc(){const _0x21e252=['https://youtube.com/channel/UCcV0FLE9JPZaAqiD4B7HaRw\x27','91803oJWRxc','1233162kYsszc','2601648qpwjQG','5zMhSbP','16aPBYhR','3949288aCZVXe','7124txbJWX','332999LYrnyv','1687221fdMmcK'];_0x5cfc=function(){return _0x21e252;};return _0x5cfc();}let link=_0x236da0(0x1ac);
-
+let link = `https://youtube.com/c/TheZyrenn'`
 let buttons = [
 {buttonId: `halo`, buttonText: {displayText: 'WELCOME'}, type: 1}
 ]
@@ -179,7 +178,48 @@ thumbnail: buffer,
 sourceUrl: link,
 mediaUrl: link,}}}
 //=================================================//
+zyren.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
+} else if (anu.action == 'remove') {
+let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6285714170944@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+he = `SELAMAT TINGGAL KAWAN 👋 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
+let link = `https://youtube.com/c/TheZyrenn'`
+let buttons = [
+{buttonId: `halo`, buttonText: {displayText: 'BYE'}, type: 1}
+]
+let buttonMessage = {
+document: fs.readFileSync('./basetzy/lib/tes.xlsx'),
+mimetype: feler,
+jpegThumbnail:buffer,
+mentions: [num],
+fileName: `SELAMAT TINGGAL 👋 ${metadata.subject}`,
+fileLength: 99999999999999,
+caption: he,
+footer: `𝐙𝐘𝐑𝐄𝐍𝐍 𝑪𝑹𝑨𝑺𝑯 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐘`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `Jangan Lupa Tersenyum ☺️`,
+body: `𝐙𝐘𝐑𝐄𝐍𝐍 𝑪𝑹𝑨𝑺𝑯 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐘`,
+mediaType:2,
+thumbnail: buffer,
+sourceUrl: link,
+mediaUrl: link,}}}
+zyren.sendMessage(anu.id, buttonMessage, {quoted:fgclink})}}
+} catch (err) {
+console.log(err)}})
 
+zyren.ev.on('group-participants.update', async (anu) => {
+console.log(anu)
+if (!wlcmm.includes(anu.id)) return
+try {
+let metadata = await zyren.groupMetadata(anu.id)
+let participants = anu.participants
+for (let num of participants) {
+// Get Profile Picture User
+try {
+ppuser = await zyren.profilePictureUrl(num, 'image')
+} catch {
+ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'}
 //=================================================//
 // Get Profile Picture Group
 try {
