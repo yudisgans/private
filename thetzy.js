@@ -45,7 +45,7 @@ global.botname = 'Ｉｎｆｉｎｉｔｙ - Ｃｒａｓｈ' //ubah jadi nama b
 global.footer = '༺~ •乂• ~༻' //ubah jadi nama mu, note tanda ' gausah di hapus!
 //=================================================//
 // Other
-global.owner = ['6281649357107']
+global.owner = ['6281649357107'] 
 global.premium = ['6281649357107']
 global.packname = '༺~ •乂• ~༻'
 global.ownerr = ['༺~ •乂• ~༻']
